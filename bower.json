@@ -1,8 +1,9 @@
 {
-  "name": "AngularJS Boilerplate",
+  "name": "ng-welcome-screen",
   "version": "1.1.7",
   "authors": [
-    "jozef butko <jbutko@gmail.com> / jozefbutko.com/resume"
+    "jozef butko <jbutko@gmail.com> / http://jozefbutko.com/resume",
+    "josh blaha <code@blahalife.com> / http://blahalife.com"
   ],
   "description": "Description goes here",
   "main": "app.js",
@@ -10,7 +11,7 @@
     "angularjs"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/jbutko/AngularJS-Boilerplate",
+  "homepage": "https://github.com:jbcoder/ng-welcome-screen.git",
   "private": false,
   "ignore": [
     "**/.*",
@@ -22,7 +23,8 @@
   "dependencies": {
     "angular": "~1.3.13",
     "angular-route": "~1.3.13",
-    "angular-sanitize": "~1.3.13",
-    "OwlCarousel": "https://github.com/OwlFonk/OwlCarousel.git#~1.3.2"
-  }
+    "angular-resource": "^1.6.5",
+    "angular-sanitize": "~1.3.13"
+  },
+  "devDependencies": {}
 }

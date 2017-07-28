@@ -11,7 +11,8 @@
   angular
   	.module('boilerplate')
     .constant('CONSTANTS', {
-      'API_URL': 'http://www.yourAPIurl.com/'
+      'API_URL': 'http://localhost:3000/',
+      'TITLE': 'Signet Welcome Screen'
     });
 
 
