@@ -55,8 +55,9 @@ gulp.task('minify-css', function () {
 			suffix: '.min'
 		}))
 		.pipe($.minifyCss({
-			keepBreaks: true
-		}))
+				keepBreaks: true
+			})
+			.on('error', err => console.error(err)))
 		.pipe(gulp.dest('./styles/'))
 		.pipe(gulp.dest('./www/css/'));
 });
@@ -123,10 +124,11 @@ gulp.task('sass', function () {
 		.pipe($.sass({
 			style: 'expanded'
 		}))
-		.on('error', $.notify.onError({
-			title: 'SASS Failed',
-			message: 'Error(s) occurred during compile!'
-		}))
+		// .on('error', $.notify.onError({
+		// 	title: 'SASS Failed',
+		// 	message: 'Error(s) occurred during compile!'
+		// }))
+		.on('error', err => console.error(err))
 		.pipe($.sourcemaps.write())
 		.pipe(gulp.dest('styles'))
 		.pipe(reload({
