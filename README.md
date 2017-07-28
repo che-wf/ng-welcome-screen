@@ -4,7 +4,7 @@ This project is a demo to show how to run a temporary server to render data on t
 
 ## Installation
 ```bash
-git clone https://github.com/jbutko/AngularJS-Boilerplate.git
+git clone git@github.com:jbcoder/ng-welcome-screen.git
 ```
 
 ## 1. Setup
@@ -21,6 +21,7 @@ json-server --watch server\schedule_data.json
 ```
 
 ## 3. Watch files
+Open another terminal and run this.
 ```bash
 npm start
 ```
