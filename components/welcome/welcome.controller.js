@@ -20,7 +20,6 @@
 
 		VisitsFactory.visitsById(params.visitId)
 			.then((result) => {
-				console.log(result.length, result);
 				if(result.length == 1){
 					$scope.visitsInfo = result[0];
 				} else if(result.length < 1){
@@ -28,9 +27,6 @@
 				}
 				return result;
 			});
-
-		// 'controller as' syntax
-		var self = this;
 	}
 
 

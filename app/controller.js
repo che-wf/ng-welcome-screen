@@ -19,10 +19,7 @@
 
 		// 'controller as' syntax
 		var self = this;
-
-
-
-
+		
 		var throttle = false;
 
 		document.querySelector('body')

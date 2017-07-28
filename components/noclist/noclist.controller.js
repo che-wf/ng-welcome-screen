@@ -14,7 +14,6 @@
 
 	NoclistController.$inject = ['$scope', 'LocalStorage', 'EventsFactory', 'VisitsFactory'];
 
-
 	function NoclistController($scope, LocalStorage, EventsFactory, VisitsFactory) {
 		EventsFactory.events()
 			.then((result) => {
