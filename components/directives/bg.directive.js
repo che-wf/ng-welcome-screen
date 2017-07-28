@@ -24,7 +24,9 @@
 				}
 				element.css({
 					'background-image': 'url(/images/' + img + '.jpg)',
-				})
+					'width': '100vw',
+					'height': '100vh',
+				});
 			});
 		};
 	}
