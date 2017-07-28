@@ -9,6 +9,9 @@ Date: Mar 2015
 // normalize: http://necolas.github.io/normalize.css/
 @import "partials/normalize";
 
+// components
+@import "partials/global";
+
 // Sass variables
 @import "partials/variables";
 
@@ -24,9 +27,6 @@ Date: Mar 2015
 // import mixins
 @import "partials/mixins";
 
-// the grid
-@import "partials/grid";
-
 // components
 @import "partials/components";
 
@@ -37,9 +37,6 @@ IMPORTING MODULES
 
 // alert boxes
 @import "modules/alerts";
-
-// buttons
-@import "modules/buttons";
 
 // forms (inputs & labels)
 @import "modules/forms";

@@ -1,11 +1,25 @@
 div {
-	.container {
+	&.page__wrapper {
+		background-attachment: fixed;
 		background-image: url('/images/general.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
 		height: 100vh;
-		margin:  -100px 0 0;
+		margin:  -71px 0 0;
+		overflow: hidden;
 		padding: 0;
 		width: 100vw;
+		z-index: 10;
+		section {
+			background-image: url('/images/bg-black-trans.png');
+			color: #fff;
+			left: 10%;
+			margin: 0 auto;
+			padding: 40px;
+			position: absolute;
+			text-align: center;
+			transform: translateY(75%);
+			width: 70%;
+		}
 	}
 }
