@@ -1,46 +1,50 @@
 ;
 (function () {
 
-/***************
-* Events factory
-****************/
+	/***************
+	 * Events factory
+	 ****************/
 
 	angular
 		.module('boilerplate')
 		.factory('EventsFactory', EventsFactory);
 
-	EventsFactory.$inject = ['$http', 'LocalStorage', 'CONSTANTS'];
+	EventsFactory.$inject = ['$http', '$q', 'LocalStorage', 'CONSTANTS'];
 
-	function EventsFactory($http, LocalStorage, CONSTANTS) {
-		let events = function () {
-			return $http({
-					method: 'GET',
-					url: CONSTANTS.API_URL + 'visit_events'
-				})
-				.then(function (events) {
-					return events.data;
-				})
-				.catch(function (error) {
-					return error;
-				});
-		}
+	// TODO: Add Local Caching
 
-		let eventsById = function (id) {
-			return $http({
-					method: 'GET',
-					url: CONSTANTS.API_URL + 'visit_events?visit_id=' + id,
-				})
-				.then(function (events) {
-					return events.data;
-				})
-				.catch(function (error) {
-					return error;
-				});
-		}
-
+	function EventsFactory($http, $q, LocalStorage, CONSTANTS) {
 		return {
-			events,
-			eventsById
+			events: function () {
+				return $http({
+						method: 'GET',
+						url: CONSTANTS.API_URL + 'visit_events',
+						cache: true
+					})
+					.then(function (events) {
+						return events.data;
+					})
+					.catch(function (error) {
+						console.error('error getting events');
+						return error;
+					});
+			},
+
+			eventsById: function (id) {
+				return $http({
+						method: 'GET',
+						url: CONSTANTS.API_URL + 'visit_events?visit_id=' + id,
+						cache: true
+					})
+					.then(function (events) {
+						return events.data;
+					})
+					.catch(function (error) {
+						return error;
+					});
+			}
+
 		}
 	}
+
 })();

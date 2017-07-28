@@ -9,7 +9,7 @@
 		<base href="/">
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>AngularJS Boilerplate</title>
+		<title>{{pageTitle}}</title>
 		<meta name="description" content="Simple AngularJS Boilerplate to kick start your new project with SASS support and Gulp watch/build tasks">
 
 		<!-- mobile meta -->
@@ -31,7 +31,7 @@
 
 	</head>
 
-	<body class="main-wrapper">
+	<body class="main__wrapper">
 
 		<!--[if lt IE 8]>
 		    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -41,7 +41,7 @@
 		<main-nav></main-nav>
 
 		<!-- Main view for templates -->
-		<div data-ng-view="" class="container"></div>
+		<div data-ng-view="" class="page__wrapper"></div>
 
 	</body>
 
@@ -71,12 +71,16 @@
 	<script type="text/javascript" src="components/services/LocalStorage.service.js"></script>
 	<script type="text/javascript" src="components/services/Visits.service.js"></script>
 	<script type="text/javascript" src="components/directives/main.nav.directive.js"></script>
+	<script type="text/javascript" src="components/directives/bg.directive.js"></script>
 	<script type="text/javascript" src="components/directives/responsive.nav.directive.js"></script>
 	<!-- endbuild -->
 
 	<!-- Application sections -->
 	<!-- build:mainapp js/mainapp.js -->
 	<script type="text/javascript" src="app/controller.js"></script>
+	<script type="text/javascript" src="components/agenda/agenda.controller.js"></script>
+	<script type="text/javascript" src="components/noclist/noclist.controller.js"></script>
+	<script type="text/javascript" src="components/welcome/welcome.controller.js"></script>
 	<!-- endbuild -->
 
 	<!-- templates from $templateCache -->

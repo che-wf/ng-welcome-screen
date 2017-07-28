@@ -1,0 +1,9 @@
+<label>Events</label><br />
+<table>
+    <tr ng-repeat="e in events">
+        <td>{{e.visit_id}}</td>
+        <td>{{e.event}}</td>
+        <td>{{e.event_start |  date:"MM/dd/yyyy h:mma"}}</td>
+        <td>{{e.event_end | date:"MM/dd/yyyy h:mma"}}</td>
+    </tr>
+</table>

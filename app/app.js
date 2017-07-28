@@ -1,14 +1,3 @@
-/**
- *
- * AngularJS Boilerplate
- * @description           Description
- * @author                Jozef Butko // www.jozefbutko.com/resume
- * @url                   www.jozefbutko.com
- * @version               1.1.7
- * @date                  March 2015
- * @license               MIT
- *
- */
 ;
 (function () {
 
@@ -46,15 +35,22 @@
 				controller: 'MainController',
 				controllerAs: 'main'
 			})
-			.when('/agenda', {
-				templateUrl: 'views/agenda.html',
-				controller: 'MainController',
-				controllerAs: 'main'
+			.when('/agenda/:visitId', {
+				templateUrl: 'components/agenda/agenda.html',
+				controller: 'AgendaController',
+				controllerAs: 'agenda',
+				param: 'id'
 			})
-			.when('/welcome', {
-				templateUrl: 'views/welcome.html',
-				controller: 'MainController',
-				controllerAs: 'main'
+			.when('/welcome/:visitId', {
+				templateUrl: 'components/welcome/welcome.html',
+				controller: 'WelcomeController',
+				controllerAs: 'welcome',
+				param: 'id'
+			})
+			.when('/noclist', {
+				templateUrl: 'components/noclist/noclist.html',
+				controller: 'NoclistController',
+				controllerAs: 'noclist'
 			})
 			.otherwise({
 				redirectTo: '/'
@@ -106,9 +102,11 @@
 		.module('boilerplate')
 		.run(run);
 
-	run.$inject = ['$rootScope', '$location'];
+	run.$inject = ['$rootScope', '$location', 'CONSTANTS'];
 
-	function run($rootScope, $location) {
+	function run($rootScope, $location, CONSTANTS) {
+		// put here everything that you need to run on page load
+
 		$rootScope.$on('$stateChangeSuccess', (event, toState) => {
 			$rootScope.pageTitle = '';
 
@@ -117,12 +115,9 @@
 				$rootScope.pageTitle += ' \u2014 ';
 			}
 
-			$rootScope.pageTitle += AppSettings.appTitle;
+			$rootScope.pageTitle += CONSTANTS.TITLE;
 		});
 
-		// put here everything that you need to run on page load
-
 	}
-
 
 })();

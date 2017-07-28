@@ -3,19 +3,15 @@
 Variables
 
 ******************************************************************/
-
-$black:             #231f20;
-$white:             #fff;
-
-$light-gray:        #f8f9fa;
-$gray:              #eaedf2;
-$text-color:        #5c6b80;
-
-$link-color:        $black;
-$link-hover:        darken($link-color, 9%);
-
-$border-color:      #ccc;
-$disabled-gray:     #cfcfcf;
-$alert-red:					red;
-$alert-green:				#645564;
-$alert-blue:				blue;
+$alert-blue: blue;
+$alert-green: #645564;
+$alert-red: red;
+$black: #231f20;
+$border-color: #ccc;
+$disabled-gray: #cfcfcf;
+$gray: #eaedf2;
+$light-gray: #f8f9fa;
+$link-color: $black;
+$link-hover: darken($link-color, 9%);
+$text-color: #5c6b80;
+$white: #fff;
