@@ -29,7 +29,7 @@ $font-extralightitalic: Helvetica, Arial, sans-serif;
 /* ===============================
      sizes
    =============================== */
-$large: 28px;
+$large: 71px;
 $medium: 20px;
 $small: 14px;
 /* ===============================
@@ -56,4 +56,12 @@ p {
 	-webkit-hyphenate-before: 2;
 	-webkit-hyphenate-after: 3;
 	hyphenate-lines: 3;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+h1 {
+	@include dyn-size-font(6);
+	font-weight: 500;
 }

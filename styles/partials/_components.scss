@@ -13,13 +13,35 @@ div {
 		section {
 			background-image: url('/images/bg-black-trans.png');
 			color: #fff;
-			left: 10%;
+			left: 50%;
 			margin: 0 auto;
+			max-height: 80vh;
+			max-height: calc(100% - 100px);
+			overflow-y: scroll;
 			padding: 40px;
-			position: absolute;
+			position: fixed;
 			text-align: center;
-			transform: translateY(75%);
-			width: 70%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: 60%;
+		}
+	}
+
+	&.agenda {
+		h1 {
+			text-align: left;
+		}
+	}
+
+	&.noclist {
+		section {
+			// transform: translateY(10%);
+		}
+		table {
+			td {
+				padding: 10px 30px;
+			}
+
 		}
 	}
 }

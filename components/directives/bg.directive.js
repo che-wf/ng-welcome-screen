@@ -14,6 +14,8 @@
 		.directive('bgImage', bgImage);
 
 	function bgImage() {
+
+		// TODO: Animate the background image so that it fades in smoothly
 		return function (scope, element, attrs) {
 			attrs.$observe('bgImage', function () {
 				let img = {};

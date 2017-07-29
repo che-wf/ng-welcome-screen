@@ -23,7 +23,7 @@
 
 		VisitsFactory.visitsById(params.visitId)
 			.then((result) => {
-				if(result.length < 1){
+				if (result.length < 1) {
 					$location.path(home);
 				}
 				return result;

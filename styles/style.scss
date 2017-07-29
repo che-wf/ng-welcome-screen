@@ -9,11 +9,14 @@ Date: Mar 2015
 // normalize: http://necolas.github.io/normalize.css/
 @import "partials/normalize";
 
-// components
-@import "partials/global";
-
 // Sass variables
 @import "partials/variables";
+
+// import mixins
+@import "partials/mixins";
+
+// components
+@import "partials/global";
 
 // Helpers
 @import "partials/helpers";
@@ -23,9 +26,6 @@ Date: Mar 2015
 
 // Sass functions
 @import "partials/functions";
-
-// import mixins
-@import "partials/mixins";
 
 // components
 @import "partials/components";
