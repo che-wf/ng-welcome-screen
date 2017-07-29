@@ -17,17 +17,26 @@
 
 	function AgendaController($scope, LocalStorage, EventsFactory, VisitsFactory, $route) {
 		// TODO: Add in logic to send to welcome when last event has finished
-		// TODO: Add in filter to hide events that are past. 
+		// TODO: Add in filter to hide events that are past.
+
 
 		let params = $route.current.params;
 
-		VisitsFactory.visitsById(params.visitId)
+		EventsFactory.eventsById(params.visitId)
 			.then((result) => {
 				if (result.length < 1) {
 					$location.path(home);
+				}else {
+					$scope.events = result;
 				}
-				return result;
 			});
+
+			(()=>{
+				VisitsFactory.visitsById(params.visitId)
+				.then((result)=>{
+					$scope.industry = result[0].customer_industry;
+				})
+			})();
 	}
 
 

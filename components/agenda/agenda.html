@@ -1,7 +1,12 @@
-<div class="container agenda">
-    <section>
-        <h1>Agenda</h1>
-        <hr />
-        
-    </section>
+<div class="container agenda" bg-image="{{industry}}">
+	<section>
+		<h1>Agenda</h1>
+		<hr />
+		<table>
+			<tr ng-repeat="e in events" ng-if="e.show_on_agenda">
+				<td>{{e.event}}</td>
+				<td>{{e.event_start | date : "h:mma" | lowercase}}</td>
+			</tr>
+		</table>
+	</section>
 </div>

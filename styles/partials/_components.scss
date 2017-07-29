@@ -11,7 +11,7 @@ div {
 		width: 100vw;
 		z-index: 10;
 		section {
-			background-image: url('/images/bg-black-trans.png');
+			background-color: rgba(0, 0, 0, 0.75);
 			color: #fff;
 			left: 50%;
 			margin: 0 auto;
@@ -28,8 +28,35 @@ div {
 	}
 
 	&.agenda {
+		section {
+			width: 78%;
+		}
 		h1 {
+			margin-left: 30px;
+			margin-top: -25px;
 			text-align: left;
+		}
+
+		hr {
+			margin-top: -40px;
+		}
+
+		table {
+			width: 100%;
+
+			td {
+				font-size: 2rem;
+				padding: 10px;
+				text-align: left;
+
+				&:first-child{
+					padding-left: 30px;
+				}
+
+				&:last-child {
+					text-align: right;
+				}
+			}
 		}
 	}
 
