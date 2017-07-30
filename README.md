@@ -21,6 +21,7 @@ You may be prompted for which version of a library to use. If so, use the option
 ```bash
 json-server --watch server\schedule_data.json
 ```
+Once the server has started, your home address for your temp API should be listed in the terminal. Be sure to change it in `app/config.js` under `API_URL` if it is different.
 
 ## 3. Watch files
 Open another terminal and run this.
