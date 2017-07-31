@@ -28,6 +28,7 @@
 					'background-image': 'url(/images/' + img + '.jpg)',
 					'width': '100vw',
 					'height': '100vh',
+					'transition': 'background 300ms ease-in 200ms',
 				});
 			});
 		};

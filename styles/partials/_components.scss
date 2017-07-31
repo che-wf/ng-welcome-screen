@@ -5,11 +5,12 @@ div {
 		background-repeat: no-repeat;
 		background-size: cover;
 		height: 100vh;
-		margin:  -71px 0 0;
+		margin: -71px 0 0;
 		overflow: hidden;
 		padding: 0;
 		width: 100vw;
 		z-index: 10;
+
 		section {
 			background-color: rgba(0, 0, 0, 0.75);
 			color: #fff;
@@ -23,6 +24,7 @@ div {
 			text-align: center;
 			top: 50%;
 			transform: translate(-50%, -50%);
+			transition: opacity 300ms ease-in;
 			width: 60%;
 
 			&::-webkit-scrollbar {
@@ -39,6 +41,7 @@ div {
 		section {
 			width: 78%;
 		}
+
 		h1 {
 			margin-left: 30px;
 			margin-top: -25px;
@@ -57,7 +60,7 @@ div {
 				padding: 10px;
 				text-align: left;
 
-				&:first-child{
+				&:first-child {
 					padding-left: 30px;
 				}
 
@@ -69,14 +72,15 @@ div {
 	}
 
 	&.noclist {
-		section {
-			// transform: translateY(10%);
-		}
+
 		table {
 			td {
 				padding: 10px 30px;
 			}
-
 		}
 	}
+}
+
+table {
+	width: 100%;
 }
