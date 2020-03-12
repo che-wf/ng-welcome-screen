@@ -1,0 +1,18 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - gulp-imagemin > imagemin > globby > fast-glob > micromatch > snapdragon > debug:
+        patched: '2020-03-12T13:30:16.530Z'
+    - gulp-imagemin > imagemin > globby > fast-glob > micromatch > braces > snapdragon > debug:
+        patched: '2020-03-12T13:30:16.530Z'
+    - gulp-imagemin > imagemin > globby > fast-glob > micromatch > extglob > snapdragon > debug:
+        patched: '2020-03-12T13:30:16.530Z'
+    - gulp-imagemin > imagemin > globby > fast-glob > micromatch > nanomatch > snapdragon > debug:
+        patched: '2020-03-12T13:30:16.530Z'
+    - gulp-imagemin > imagemin > globby > fast-glob > micromatch > extglob > expand-brackets > debug:
+        patched: '2020-03-12T13:30:16.530Z'
+    - gulp-imagemin > imagemin > globby > fast-glob > micromatch > extglob > expand-brackets > snapdragon > debug:
+        patched: '2020-03-12T13:30:16.530Z'
