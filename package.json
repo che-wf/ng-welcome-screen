@@ -40,7 +40,9 @@
     "build": "gulp build",
     "server": "gulp server",
     "serverbuild": "gulp server-build",
-    "postinstall": "npm install gulp-sass gulp-imagemin --save&&bower install --no-interactive"
+    "postinstall": "npm install gulp-sass gulp-imagemin --save&&bower install --no-interactive",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -63,6 +65,8 @@
   "homepage": "https://github.com:jbcoder/ng-welcome-screen.git",
   "dependencies": {
     "gulp-imagemin": "^5.0.0",
-    "gulp-sass": "^3.1.0"
-  }
+    "gulp-sass": "^3.1.0",
+    "snyk": "^1.298.1"
+  },
+  "snyk": true
 }
