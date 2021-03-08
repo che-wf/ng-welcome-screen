@@ -62,7 +62,7 @@
   },
   "homepage": "https://github.com:jbcoder/ng-welcome-screen.git",
   "dependencies": {
-    "gulp-imagemin": "^5.0.0",
+    "gulp-imagemin": "^6.1.0",
     "gulp-sass": "^3.1.0"
   }
 }
